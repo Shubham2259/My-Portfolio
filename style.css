@@ -4,37 +4,29 @@
   box-sizing:border-box;
 }
 
-html,body{
+html, body{
   width:100%;
-  height:100%;
+  height:auto;           /* ✅ fixed */
   scroll-behavior:smooth;
   font-family: Arial, sans-serif;
 }
 
-:root{
-  --container: 1200px;
-  --pad: 20px;
-}
-
 #main{
   width:100%;
-  min-height:100vh;
+  min-height:100vh;      /* ✅ fixed */
 }
 
 /* ================= HEADER ================= */
 #box1{
   width:100%;
-  min-height:80px;
   display:flex;
   align-items:center;
   justify-content:space-between;
-  padding: 10px var(--pad);
-  max-width: var(--container);
-  margin: 0 auto;
+  padding: 14px 24px;
 }
 
 #box2 p{
-  font-size: clamp(22px, 3vw, 40px);
+  font-size: 40px;
   font-weight: 500;
 }
 
@@ -42,17 +34,14 @@ html,body{
   display:flex;
   gap: 28px;
   flex-wrap:wrap;
-  justify-content:center;
-  align-items:center;
 }
 
 #box3 a{
   text-decoration:none;
   color:#000;
-  font-size: clamp(16px, 2vw, 22px);
+  font-size: 22px;
 }
-
-#box3 a:hover{ color:gray; }
+#box3 a:hover{ color: gray; }
 
 /* ================= HERO ================= */
 #box4{
@@ -62,51 +51,39 @@ html,body{
   align-items:center;
   justify-content:center;
   gap: 40px;
-  padding: 30px var(--pad);
-  max-width: var(--container);
-  margin: 0 auto;
+  padding: 40px 24px;
 }
 
 #box5{
+  width: 40%;
   display:flex;
   align-items:center;
   justify-content:center;
+  margin:0;              /* ✅ removed bad margin */
 }
 
 #box5 img{
-  width: min(320px, 80vw);
-  aspect-ratio: 1/1;
-  object-fit: cover;
+  width: 360px;
+  max-width: 90%;
   border-radius:50%;
+  object-fit:cover;
 }
 
 #box6{
+  width: 60%;
   display:flex;
-  align-items:center;
   justify-content:center;
+  align-items:center;
   text-align:center;
 }
 
-#p1{
-  font-size: 18px;
-  font-weight:700;
-}
-
-#p2{
-  font-size: clamp(28px, 4vw, 52px);
-  font-weight:800;
-}
-
-#p3{
-  font-size: clamp(20px, 3vw, 40px);
-  font-weight:800;
-}
-
-#p2:hover,#p3:hover{ color:#868282; }
+#p1{ font-size:20px; font-weight:700; }
+#p2{ font-size:50px; font-weight:800; }
+#p3{ font-size:42px; font-weight:800; }
 
 .box{
   display:flex;
-  gap: 16px;
+  gap: 14px;
   justify-content:center;
   margin-top: 14px;
   flex-wrap:wrap;
@@ -114,15 +91,15 @@ html,body{
 
 .b1,.b2{
   border:2px solid #000;
-  border-radius: 999px;
+  border-radius:999px;
   padding: 10px 18px;
+  min-width: 150px;
   text-decoration:none;
   color:#000;
+  font-weight:700;
   display:inline-flex;
   align-items:center;
   justify-content:center;
-  font-weight:600;
-  min-width: 140px;
 }
 
 .b1:hover,.b2:hover{
@@ -131,46 +108,34 @@ html,body{
 }
 
 .img{
-  margin-top: 18px;
+  margin-top: 14px;
   display:flex;
   justify-content:center;
-  align-items:center;
   gap: 18px;
 }
 
 .img img{
-  width: 44px;
-  height: 44px;
-  object-fit: contain;
+  width: 46px;
+  height: 46px;
+  object-fit:contain;
 }
 
 /* ================= ABOUT ================= */
 #main2{
   width:100%;
-  padding: 60px var(--pad);
-  max-width: var(--container);
-  margin: 0 auto;
+  min-height:100vh;
+  padding: 70px 24px;
 }
 
 #box8{
   display:flex;
   justify-content:center;
-  align-items:center;
   margin-bottom: 30px;
-}
-
-#box9{
   text-align:center;
 }
 
-#box9 p{
-  font-size: 18px;
-  color:#444;
-}
-
-#box9 h1{
-  font-size: clamp(30px, 4vw, 52px);
-}
+#box9 p{ font-size:18px; color:#444; }
+#box9 h1{ font-size:52px; }
 
 #box10{
   display:flex;
@@ -179,21 +144,20 @@ html,body{
 }
 
 #box11{
+  width: 40%;
   display:flex;
   justify-content:center;
-  align-items:center;
-  flex: 1;
 }
 
 #box11 img{
-  width: min(360px, 85vw);
-  aspect-ratio: 1/1;
-  object-fit: cover;
+  width: 400px;
+  max-width: 90%;
   border-radius:50%;
+  object-fit:cover;
 }
 
 #box12{
-  flex: 1.4;
+  width: 60%;
 }
 
 #box13{
@@ -204,23 +168,12 @@ html,body{
 }
 
 #box15,#box16{
-  flex: 1;
+  flex:1;
   min-width: 260px;
   border:2px solid #383940;
   border-radius: 22px;
-  padding: 18px 12px;
+  padding: 18px;
   text-align:center;
-}
-
-#text1 img,#text2 img{
-  width: 28px;
-  height: 28px;
-  margin-bottom: 10px;
-}
-
-#text1 h2,#text2 h2{
-  font-size: 22px;
-  margin-bottom: 8px;
 }
 
 #box14 ul{
@@ -232,38 +185,35 @@ html,body{
 /* ================= EXPERIENCE ================= */
 #main3{
   width:100%;
-  padding: 60px var(--pad);
-  max-width: var(--container);
-  margin: 0 auto;
+  min-height:100vh;
+  padding: 70px 24px;
 }
 
 #main31{
   display:flex;
   justify-content:center;
-  margin-bottom: 30px;
   text-align:center;
+  margin-bottom: 30px;
 }
 
-#E2 p{ color:#444; }
-#E2 h1{ font-size: clamp(34px, 4vw, 56px); }
+#E2 h1{ font-size:56px; }
 
 #main32{
   display:flex;
   gap: 30px;
-  align-items:stretch;
   justify-content:center;
   flex-wrap:wrap;
 }
 
 #EB1,#EB2{
+  width: min(520px, 95vw);
   border:2px solid #bdbdbd;
   border-radius: 26px;
   padding: 24px;
-  width: min(520px, 95vw);
 }
 
 .skills-card{
-  width:100%;
+  width: 100%;           /* ✅ fixed overflow */
 }
 
 .skills-title{
@@ -277,7 +227,7 @@ html,body{
 .skills-grid{
   display:grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 18px 30px;
+  gap: 18px 26px;
 }
 
 .skill-item{
@@ -292,23 +242,14 @@ html,body{
   margin-top: 2px;
 }
 
-.skill-name{
-  font-size: 18px;
-  font-weight:700;
-}
-
-.skill-level{
-  font-size: 14px;
-  color:#666;
-  margin-top: 3px;
-}
+.skill-name{ font-size:18px; font-weight:800; }
+.skill-level{ font-size:14px; color:#666; }
 
 /* ================= PROJECTS ================= */
 #main4{
   width:100%;
-  padding: 60px var(--pad);
-  max-width: var(--container);
-  margin: 0 auto;
+  min-height:100vh;
+  padding: 70px 24px;
 }
 
 #pr{
@@ -316,8 +257,7 @@ html,body{
   margin-bottom: 30px;
 }
 
-#pr1 p{ color:#444; }
-#pr1 h1{ font-size: clamp(34px, 5vw, 64px); }
+#pr1 h1{ font-size:64px; }
 
 #parent{
   display:flex;
@@ -370,7 +310,7 @@ html,body{
   border-radius: 999px;
   text-decoration:none;
   color:#000;
-  font-weight:600;
+  font-weight:700;
   text-align:center;
   transition: 0.2s;
 }
@@ -384,9 +324,8 @@ html,body{
 /* ================= CONTACT ================= */
 #main5{
   width:100%;
-  padding: 60px var(--pad) 30px;
-  max-width: var(--container);
-  margin: 0 auto;
+  min-height:100vh;
+  padding: 70px 24px 30px;
 }
 
 #content{
@@ -395,7 +334,7 @@ html,body{
 
 #content p{ color:#555; }
 #content h1{
-  font-size: clamp(30px, 4vw, 50px);
+  font-size: 50px;
   margin: 10px 0 22px;
 }
 
@@ -419,15 +358,13 @@ html,body{
   text-decoration:none;
   color:#000;
   font-size: 18px;
-  font-weight:600;
+  font-weight:700;
 }
 
 .contact-item img{
   width: 32px;
   height: 32px;
 }
-
-.contact-item:hover{ color:#0077b5; }
 
 #dsas{
   margin-top: 40px;
@@ -455,24 +392,57 @@ html,body{
   color:#666;
 }
 
-/* ================= MOBILE BREAKPOINT ================= */
+/* ================= MOBILE RESPONSIVE ================= */
 @media (max-width: 900px){
+
   #box1{
     flex-direction:column;
+    align-items:center;
     gap: 10px;
+  }
+
+  #box2 p{
+    font-size: 30px;
+    text-align:center;
+  }
+
+  #box3{
+    justify-content:center;
+    gap: 16px;
   }
 
   #box4{
     flex-direction:column;
+    gap: 20px;
     min-height:auto;
   }
 
+  #box5, #box6{
+    width: 100%;
+  }
+
+  #p2{ font-size: 34px; }
+  #p3{ font-size: 26px; }
+
   #box10{
     flex-direction:column;
+    gap: 24px;
+  }
+
+  #box11, #box12{
+    width: 100%;
   }
 
   .skills-grid{
     grid-template-columns: 1fr;
+  }
+
+  #pr1 h1{
+    font-size: 44px;
+  }
+
+  #content h1{
+    font-size: 40px;
   }
 
   .contact-box{
